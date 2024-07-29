@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Q Generator</title>
+<style>
+
+  
+
+    fieldset{
+border-color:orange;
+border-width:7px;
+border-style:double;
+border-radius:30px;
+
+    }
+
+    body {
+        font-family:monospace;
+        text-align: center;
+        margin-top: 50px;
+        background-color:black;
+    }
+    h1 {
+        color:yellowgreen;
+    }
+    .question {
+        margin-bottom: 20px;
+        color:aqua;
+        font-family: monospace;
+        font-size:20px;
+       
+    }
+    input[type="text"] {
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        transition: all 2.3s ease; /* Smooth transition for all properties */
+    outline:aquamarine; /* Remove default outline */
+    font-family:monospace;
+    
+    }
+
+    input[type="text"]:focus {
+    border-color:yellowgreen; /* Change border color */
+    box-shadow: 0 0 8px rgba(21, 86, 156, 0.5); /* Add shadow */
+    transform: scale(1.5); /* Slightly enlarge */
+    color:red;   
+    background-color:black; /* Change background color on focus */
+    border-radius: 25px;
+   
+}
+
+ 
+    button {
+        margin-top: 10px;
+        margin-left:50px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+       font-family:monospace;
+    padding: 10px 20px;
+    background-color:whitesmoke;
+    color: rgb(112, 128, 74);
+    border-width: 5px;
+    border-color:grey;
+    border-radius: 30px;
+    transition: all 2.3s ease; /* Smooth transition for all properties */
+}
+    
+
+    button:hover {
+    background-color: Black;
+    outline:aquamarine; /* Remove default outline */
+    transform:  scale(1.2); /* Slightly enlarge */
+    color:greenyellow;
+}
+
+    .score {
+        margin-top: 20px;
+        font-size: 20px;
+        font-family:monospace;
+       color:violet;
+        padding:30px;
+    }
+
+     /* Animation styles */
+  .typing-animation {
+    overflow: hidden; /* Ensures text does not overflow */
+    white-space: nowrap; /* Ensures text is not wrapped */
+    animation: typing 3.7s steps(40, end);
+    border-right: .15em solid red; /* Typing cursor effect */
+    display: inline-block; /* Ensures the animation works correctly */
+    transition: all 7s ease; /* Smooth transition for all properties */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Keyframe animation definition */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+
+</style>
+</head>
+<body>
+<fieldset>
+    <h1>Q Generator</h1>
+    <div class="question" id="question"></div>
+    <input type="text" id="answer" placeholder="Type in answer">
+    <button onclick="checkAnswer()">Check Answer</button>
+    <div class="score" id="score"></div>
+</fieldset>
+<script src="Script1.js"></script>
+</body>
+</html>
